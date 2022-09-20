@@ -168,6 +168,10 @@ class USER
                 when "5"
                     export_contacts_to_csv
                 when "6"
+                    puts "\nGood bye!!"
+                    # Press enter to continue
+                    puts "\n--Press enter to finish--".center(50)
+                    gets
                     exit
             end
         end
