@@ -11,4 +11,4 @@ This program will allow the user to create a contact book and interact with CRUD
 # Instructions
 
 1. Clone the repository
-2. Run `ruby ContactBook.r` in the terminal
+2. Run `ruby ContactBook.rb` in the terminal
