@@ -21,11 +21,23 @@ class USER
         puts "Please enter the contact's phone number"
         phone = gets.chomp
         puts "\n"
-        puts "Please enter the contact's email"
-        email = gets.chomp
-        puts "\n"
-        @contacts << {first_name: first_name, last_name: last_name, email: email, phone: phone}
-        puts "\nYour contact has been created!!"
+        
+        loop do
+          puts "Please enter the contact's email"
+            email = gets.chomp
+            if email.include?("@") && email.include?(".")
+                puts "\n"
+                @contacts << {first_name: first_name, last_name: last_name, email: email, phone: phone}
+                puts "\nYour contact has been created!!"
+                break
+            else
+                puts "\nThe email is not valid!! (It must include @ and .)"
+                # Press enter to continue
+                puts "\n--Press enter to continue--".center(50)
+                gets
+            end
+        end
+
         # Press enter to continue
         puts "\n--Press enter to continue--".center(50)
         gets
